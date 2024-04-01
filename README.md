@@ -43,15 +43,15 @@ sudo systemctl status httpd
 
 Criação do script de validação (check_apache_status.sh) usando um editor de texto vim.
 
-Apliquei no script para aparição de DATA e HORA na validação.
+Aplicação no script para aparição de DATA e HORA na validação.
 
 SCRIPT se encontra dentro do repositório em "script.sh".
 
 
 ## Agendamento Automatizado do Script:
 
-Edição do arquivo /etc/crontab usando o editor vim para adicionar a execução periódica do script:
+Edição do arquivo /etc/crontab usando o editor vim para adicionar a execução periódica (a cada 5min) do script:
 
 sudo vim /etc/crontab
 
-Na ultima linha livre anexei: */5 * * * * root /srv/nfs/shared/joao-victor/check_apache_status.sh
+Na ultima linha livre foi anexado: */5 * * * * root /srv/nfs/shared/joao-victor/check_apache_status.sh
