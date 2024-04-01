@@ -45,7 +45,7 @@ Criação do script de validação (check_apache_status.sh) usando um editor de 
 
 Apliquei no script para aparição de DATA e HORA na validação.
 
-SCRIPT no README.
+SCRIPT se encontra dentro do repositório em "script.sh".
 
 
 ## Agendamento Automatizado do Script:
