@@ -1,6 +1,6 @@
-## Projeto-Compass
+# Projeto-Compass
 
-# Configuração do NFS:
+## Configuração do NFS:
 
 Instalação do servidor NFS:
 sudo yum install nfs-utils
@@ -20,27 +20,38 @@ Criação de um Diretório no NFS:
 sudo mkdir /nfs-aws/joao-victor
 
 
-# Instalação e Configuração do Apache HTTP Server:
+## Instalação e Configuração do Apache HTTP Server:
 
 Instalação do servidor Apache HTTP:
 
 sudo yum install httpd
 
 Inicialização do Apache:
- sudo systemctl start httpd
+
+sudo systemctl start httpd
+
 Habilitar o serviço para iniciar automaticamente na inicialização:
+
 sudo systemctl enable httpd
+
 Testando:
+
 sudo systemctl status httpd
 
 
-# Criação do Script de Validação do Serviço:
+## Criação do Script de Validação do Serviço:
+
 Criação do script de validação (check_apache_status.sh) usando um editor de texto vim.
+
 Apliquei no script para aparição de DATA e HORA na validação.
+
 SCRIPT no README.
 
 
-# Agendamento Automatizado do Script:
+## Agendamento Automatizado do Script:
+
 Edição do arquivo /etc/crontab usando o editor vim para adicionar a execução periódica do script:
+
 sudo vim /etc/crontab
+
 Na ultima linha livre anexei: */5 * * * * root /srv/nfs/shared/joao-victor/check_apache_status.sh
