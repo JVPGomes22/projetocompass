@@ -21,10 +21,13 @@ sudo mkdir /nfs-aws/joao-victor
 
 
 # Instalação e Configuração do Apache HTTP Server:
+
 Instalação do servidor Apache HTTP:
+
 sudo yum install httpd
+
 Inicialização do Apache:
-sudo systemctl start httpd
+ sudo systemctl start httpd
 Habilitar o serviço para iniciar automaticamente na inicialização:
 sudo systemctl enable httpd
 Testando:
