@@ -9,6 +9,10 @@ EFS configurado pela AWS para instância:
 
 sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-069a843885dc623cc.efs.us-east-1.amazonaws.com:/ /nfs-aws
 
+Para a montagem do fstab automaticamente na inicialização da instância foi anexado dentro do mesmo: (vim /etc/fstab)
+
+fs-069a843885dc623cc.efs.us-east-1.amazonaws.com:/ /nfs-aws nfs4 defaults 0 0
+
 Habilitação e inicialização do serviço NFS:
 
 sudo systemctl enable nfs-server
